@@ -41,7 +41,7 @@ const moedas = {
     "UAH": "Hryvnia Ucraniana"
 };
 
-// Preenche os selects com as moedas
+
 const fromCurrency = document.getElementById("fromCurrency");
 const toCurrency = document.getElementById("toCurrency");
 const exchangeRateText = document.getElementById("exchangeRate");
@@ -65,7 +65,7 @@ toCurrency.value = "BRL";
 // Função para buscar e exibir a taxa de câmbio
 async function atualizarTaxa() {
     const from = fromCurrency.value;
-    const apiKey = "b10d93545b733f47c81d8b10"; // Substitua pela sua chave da API
+    const apiKey = "b10d93545b733f47c81d8b10"; 
     const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${from}`;
 
     try {
@@ -88,7 +88,7 @@ async function atualizarTaxa() {
 fromCurrency.addEventListener("change", atualizarTaxa);
 toCurrency.addEventListener("change", atualizarTaxa);
 
-// Atualiza a taxa ao iniciar o site
+
 atualizarTaxa();
 
 // Evento para conversão
@@ -102,7 +102,7 @@ document.getElementById("convert").addEventListener("click", async function() {
         return;
     }
 
-    const apiKey = "b10d93545b733f47c81d8b10"; // Substitua pela sua chave da API
+    const apiKey = "b10d93545b733f47c81d8b10"; 
     const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${from}`;
 
     try {
